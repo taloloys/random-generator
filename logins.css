@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background-image: url("andrew-s-ouo1hbizWwo-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    position: fixed;
+    max-width: 800px;
+    margin-left: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: snow;
+    backdrop-filter: blur(10px);
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(254, 249, 249, 0.5);
+    transition: margin-left 0.5s ease;
+    transform: translateX(-300px);
+    transition: .5s ease;
+    z-index: 99;
+}
+
+
+#description {
+    margin-left: 0;
+}
+
+#description:hover{
+    border-color: 2px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 80px rgba(37, 36, 36, 0.5);
+}
+
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+.btnLogin-popup{
+    width: 120px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+
+
+.wrapper{
+    position: fixed;
+    right: 6%;
+    transform: translateY(-50%);    
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .close-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: snow;
+    font-size: 2em;
+    color: #162938;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: snow;
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid snow;
+    margin: 30px 0;
+}
+
+.input_box label{
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: snow;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input_box input:focus~label,
+.input_box input:valid~label {
+    top: -5px;
+}
+
+.input_box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none; 
+    outline: none; 
+    font-size: 1em;
+    color: snow;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input_box .icon{
+    position:absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: snow;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: snow;
+    font-weight:500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: snow;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: snow;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: snow;
+    color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    color: snow;
+    background: #162938;
+}
+
+.login-register {
+    font-size: .9em;
+    color: snow;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    user-select: none;
+}
+
+.login-register p a {
+    color: snow;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+.modal {
+    width: 400px;
+    height: 25%;
+    background: snow;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #162938;
+    visibility: hidden;
+    transition: transform .5s, top .4s;
+    z-index: 999;
+}
+
+.open-modal {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rbga(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    margin-top: 15px;
+    width: 50px;
+    height: 50%;
+    border-radius: 5px;
+    color: snow;
+    background: #162938;
+    border: 2.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.close-btn:hover {
+    color: #162938;
+    background: snow;
+    border: 2.5px solid;
+}
