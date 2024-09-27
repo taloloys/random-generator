@@ -69,7 +69,7 @@ function signIn(event){
         var data = JSON.parse(user);
 
         if (username === data.username && password === data.password) {
-            window.location.href = "../random generator/activity.html";
+            window.location.href = "activity.html";
         } else {
             alert('Incorrect username or password');
         }
