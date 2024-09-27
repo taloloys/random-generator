@@ -66,7 +66,7 @@ function disableBackButton() {
 }
 
 function logout(){
-    window.location.href = "../login/login.html";
+    window.location.href = "index.html";
     disableBackButton();
 
 }
