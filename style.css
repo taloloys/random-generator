@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background-image: url("../login/andrew-s-ouo1hbizWwo-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #1f2833; 
+}
+
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.container{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 110px auto;
+}
+
+.lagout{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.tunga-ka {
+    top: 10px;
+    position:absolute;
+
+    left: 660px;
+}
+
+.btnLogin-popup{
+    position: absolute;
+    top: 20px;
+    right: 8%;
+    width: 125px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;  
+    transition: .5s;
+    z-index: 99;
+}
+
+.btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.top {
+    margin: 60px auto;
+    text-align: center; 
+    padding-right: 70px;
+    color: rgb(229, 224, 224);
+    z-index: 1;
+}
+
+.left{
+  
+    text-align: center;
+    margin-left: auto;
+    color: rgb(229, 224, 224);
+    
+}
+
+.mid{
+    margin: 0 auto;
+    color: rgb(229, 224, 224)
+   
+}
+
+.right{
+    text-align: center;
+    margin-right: auto;
+    color: rgb(229, 224, 224);
+    font-size: 17px;
+}
+
+.foot{
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: snow;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn1,.btn2{
+    height: 35px;
+    width: 130px;
+    color: #162938;
+    background-color: snow;
+    border-color:#162938;
+    border-radius: 15px;
+    margin: 35px auto;
+    text-align: center;
+    font-weight: 600;
+    display: block;
+    transition: background-color .5s ease-in-out;
+}
+
+.btn3{
+    height: 35px;
+    width: 130px;
+    color: #162938;
+    background-color: snow;
+    border-color:#162938;
+    border-radius: 15px;
+    margin: 20px auto;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    transition: background-color .5s ease-in-out;
+}
+
+.btn1:hover,.btn2:hover,.btn3:hover{
+    background-color: #162938;
+    border: none;
+    color: snow;
+    font-weight: bold ;
+}
+
+.dog-image, .cat-image{
+    height: 290px;
+    width: 290px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(225, 242, 241, 0.8);
+    position:relative;
+}
+
+#dogs, #cats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow{
+    height: 260px;
+    padding: 10px;
+    border-radius: 20px;
+    
+    box-shadow:  0 0 20px rgba(225, 242, 241, 0.8);
+}
+
+
+#quote,#author{
+    
+    padding-top: 30px;
+    text-align: center;
+}
+ 
