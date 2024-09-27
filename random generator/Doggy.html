@@ -1,0 +1,131 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Dog Picture</title>
+
+        <style>
+       
+            body {
+                background-color: #1f2833;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 100vh;
+            }
+
+            .head{
+                text-align: center;
+            }
+
+            .dog-image, .cat-image {
+                text-align: center;
+                border-radius: 20px;
+                transition: border-color 0.3s, box-shadow 0.3s; 
+            }
+
+            .dog-image:hover, .cat-image:hover {
+                
+                box-shadow: 0 0 40px rgba(102, 252, 241, 0.8);
+            }
+            
+            #quote, #author{
+                text-align: center;
+            }
+
+            .mid {
+                text-align: center;
+                color: #66Fcf1;
+                font: optional  ;
+                margin-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .left{
+                color: #66Fcf1;
+                margin-left: auto;
+                margin-top: 10px;
+            }
+
+            .right{
+                color: #66Fcf1;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+
+            
+            
+            .btn1, .btn2 {
+                text-align: center;
+                color: white;
+                height: 30px;
+                width: 130px;
+                background-color: #1f2833;
+                border-color:#66Fcf1;
+                border-radius: 15px;
+                transition: background-color .5s ease-in-out;
+                margin: 35px auto;
+                display: block;
+            }
+
+            .btn1:hover,.btn2:hover{
+                background-color: white;
+                color: black;
+            }
+
+            .btn3 {
+                text-align:center;
+                color: white;
+                height: 30px;
+                width: 130px;
+                margin-top: 50px;
+                background-color: #1f2833;
+                border-color:#66Fcf1;
+                border-radius: 15px;
+                margin-top: 20px;
+                transition: background-color 0.5s ease-in-out;
+                margin: auto;
+                display: block;
+            }
+
+            .btn3:hover {
+                background-color: white;
+                color: black;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+    
+        
+        <div class="left">
+            <h1>Random Dog Picture</h1>
+            <p id="dogImage" class="dog-image">Image Picture Here.</p>
+        
+            <button class="btn1" id="btn1">Generate Dog</button>
+        </div>
+
+        <div class="mid">
+            <h1>Random Cat Picture</h1>
+            <p id="catImage" class="cat-image">Image Picture Here.</p>
+        
+            <button class="btn2" id="btn2">Generate Cat</button>
+        </div>
+
+        <div class="right">
+            <h1>Random Quote Generator</h1>
+            <p id="quote">You're quote here.</p>
+            <p id="author">Author</p>
+        
+            <button class="btn3" id="btn3">Generate Quote</button>
+        </div>
+
+        
+
+    </body>
+    <script src="script.js"></script>
+    </html>
